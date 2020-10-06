@@ -52,3 +52,19 @@ To add more than 1 entry: <br />
 ### Query data from table
 
 `SELECT * FROM bands;`
+
+### Query just the fisrt 2 bands
+
+`SELECT * FROM bands LIMIT 2;`
+
+### Query just certain columns
+
+`SELECT name FROM bands`
+
+### Rename the columns
+
+`SELECT id AS 'ID', name AS 'Band Name' from bands;`
+
+### Order the way elements inside SELECT are rendered
+
+`SELECT * FROM bands ORDER BY name;`
