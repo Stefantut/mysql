@@ -120,3 +120,12 @@ Left Join will return everything from the left side no matter what. (left side =
 
 `SELECT * FROM bands RIGHT JOIN albums ON bands.id = albums.band_id;`
 RIGHT Join will return everything from the right side no matter what.
+
+### Agregate functions
+
+`SELECT AVG(release_year) FROM albums`
+This will return the average release year.
+This agregate takes everything from the SELECT and runs a function on it - average. Other ex: SUM, COUNT.
+
+`SELECT band_id, COUNT(band_id) FROM albums GROUP BY band_id`
+Agregates work on the actual group as a whole instead of the entire query.
