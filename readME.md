@@ -68,3 +68,19 @@ To add more than 1 entry: <br />
 ### Order the way elements inside SELECT are rendered
 
 `SELECT * FROM bands ORDER BY name;`
+
+### Descening Order the way elements inside SELECT are rendered
+
+`SELECT * FROM bands ORDER BY name DESC;`
+
+### Example of adding more albums
+
+`INSERT INTO albums (name, release_year, band_id) VALUES('album 1', 2000, 1), VALUES('album 2', 2001, 1), VALUES('album 3', 2002, 1), VALUES('album 4', 2003, 2), VALUES('album 5', NULL, 3), `
+
+### Query just the unique rows from table - add DISTINCT
+
+`SELECT DISTINCT name FROM albums;`
+
+### Change a value
+
+`UPDATE albums SET release_year = 1983 WHERE id = 1;`
