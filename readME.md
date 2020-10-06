@@ -84,3 +84,11 @@ To add more than 1 entry: <br />
 ### Change a value
 
 `UPDATE albums SET release_year = 1983 WHERE id = 1;`
+
+### Filter what you are selecting from database
+
+`SELECT * FROM albums WHERE release_year < 2000;`
+
+### Another way to filter - any amount of chars before and after 'er'
+
+`SELECT * FROM albums WHERE name LIKE '%er%'`
