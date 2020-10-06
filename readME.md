@@ -41,3 +41,14 @@ This will create a string column with max of 255 characters named another_column
 ### Remove Table:
 
 `DROP TABLE table_name;`
+
+### Insert data in table
+
+`INSERT INTO bands (name) VALUES ('stefan');`
+
+To add more than 1 entry: <br />
+`INSERT INTO bands (name) VALUES ('stefan1'), ('stefan 2'), ('stefan 3');`
+
+### Query data from table
+
+`SELECT * FROM bands;`
