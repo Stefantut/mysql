@@ -87,8 +87,36 @@ To add more than 1 entry: <br />
 
 ### Filter what you are selecting from database
 
-`SELECT * FROM albums WHERE release_year < 2000;`
+`SELECT * FROM albums WHERE release_year <br 2000;`
 
 ### Another way to filter - any amount of chars before and after 'er'
 
 `SELECT * FROM albums WHERE name LIKE '%er%'`
+
+### Combine inside of a single query
+
+`SELECT * FROM albums WHERE name LIKE '%er%' OR band_id = 2;`
+`SELECT * FROM albums WHERE release_year = 1984 AND band_id = 1;`
+
+### Filter between 2 different values
+
+`SELECT * FROM albums WHERE release_year BETWEEN 2000 and 2018`
+
+### Filter for things that are null
+
+`SELECT * FROM albums WHERE realease_year IS NULL;`
+
+### Delete just one row
+
+`DELETE FROM albums WHRE id = 5;`
+
+### Joint Statement - allows us to join 2 different tables toghether on different properties
+
+`SELECT * FROM bands INNER JOIN albums ON bands.id = albums.band_id;`
+Inner join (join) combines data where there is a value on both sides and only return values that will match. <br />
+
+`SELECT * FROM bands LEFT JOIN albums ON bands.id = albums.band_id;`
+Left Join will return everything from the left side no matter what. (left side = bands, right side = albums)
+
+`SELECT * FROM bands RIGHT JOIN albums ON bands.id = albums.band_id;`
+RIGHT Join will return everything from the right side no matter what.
